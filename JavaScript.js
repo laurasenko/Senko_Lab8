@@ -1,21 +1,28 @@
 //Set up variable with grocery items that have name, price, & quantity variables.
 var grocery = [
-  { name: "apples",
+  { name: "Apples",
     price: 2,
     quantity: 3},
-  { name: "oranges",
+  { name: "Oranges",
     price: 2,
     quantity: 3},
-  { name: "strawberries",
+  { name: "Strawberries",
     price: 3,
     quantity: 3},
-  { name: "pineapple",
+  { name: "Pineapple",
     price: 4,
     quantity: 1},
-  { name: "nutella",
+  { name: "Nutella",
     price: 5,
     quantity: 2}];
 
+    function addItem(){
+      var item = document.createElement("li");
+      var input = documentgetElementbyId("newItem");
+      newItem.innerHTML = input.value;
+      input.value= "";
+      document.getElementById("listItems").appendChild(li);
+    }
 
     for (var i = 0; i < grocery.length; i++){
       var item = document.createElement("li");
@@ -24,7 +31,7 @@ var grocery = [
      }
 
      function totalBillNoTax () {
-     var itemName;
+     var itemNsame;
      var itemPrice;
      var itemQuantity;
      //var totalBillWithTax = 0;
@@ -35,6 +42,7 @@ var grocery = [
      //multiplies item prices by their quantities and adds items together for total bill
      for (i = 0; i < grocery.length; i++) {
        totalBillNoTax += grocery[i].price * grocery[i].quantity;
+
      //console.log( "Item: " + itemName + "  Price: " + "$" + itemPrice.toFixed(2) + "  Quantity: " + itemQuantity);}
      //prints bill w/o tax and converts to 2 decimal points
      //console.log ("Total bill without tax = $" + totalBillNoTax.toFixed(2));
